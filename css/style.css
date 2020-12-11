@@ -2841,6 +2841,9 @@ body {
     z-index: 2; }
   .services .item-box {
     padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center; }
     .services .item-box:nth-of-type(2) {
       background: #f9fbfd; }
@@ -5115,6 +5118,7 @@ body {
   display: block;
   width: 100px;
   height: 100px;
+  padding: .7rem;
   object-fit: contain;
   margin: auto;
   filter: grayscale(100%);
@@ -5124,3 +5128,4 @@ body {
 .cilient .owl-item img:hover{
   filter: grayscale(0);
 }
+
