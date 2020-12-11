@@ -87,6 +87,7 @@ td , th{
   .comparison table {
     border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
     table-layout: fixed;
     border-bottom:1px solid #CCC;
   }
@@ -204,6 +205,11 @@ td , th{
     .price-info {
     border-top:0 !important;
     
+  }
+
+  .comparison table {
+    width: unset;
+    margin: auto;
   }
     
   }
