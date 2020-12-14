@@ -40,6 +40,68 @@
 
     <link rel="stylesheet" href="css/price.css" />
 
+    <style>
+        .modal-window {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.8);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 999;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+
+        .modal-window:target {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-window>div {
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 20px;
+            transform: translate(-50%, -50%);
+            padding: 2em;
+            background: #ffffff;
+        }
+
+        .modal-window header {
+            font-weight: bold;
+        }
+
+        .modal-window h1 {
+            font-size: 150%;
+            margin: 0 0 15px;
+        }
+
+        .modal-close {
+            color: #aaa;
+            line-height: 50px;
+            font-size: 80%;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+            width: 70px;
+            text-decoration: none;
+        }
+
+        .modal-close:hover {
+            color: black;
+        }
+
+        .modal-window div:not(:last-of-type) {
+            margin-bottom: 15px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -166,441 +228,484 @@
 
         <div class="comparison" style="margin-top: 52px;">
 
-            <table>
-                <thead>
-                    <tr>
-                        <th class="tl tl2"></th>
+            <div id="generic_price_table">
+                <section class="section-price">
+                    <div class="container">
+                        <!--BLOCK ROW START-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!--PRICE CONTENT START-->
+                                <div class="generic_content clearfix">
+                                    <!--HEAD PRICE DETAIL START-->
+                                    <div class="generic_head_price clearfix">
+                                        <!--HEAD CONTENT START-->
+                                        <div class="generic_head_content clearfix">
+                                            <!--HEAD START-->
+                                            <div class="head_bg"></div>
+                                            <div class="head">
+                                                <span>STARTUP</span>
+                                            </div>
+                                            <!--//HEAD END-->
+                                        </div>
+                                        <!--//HEAD CONTENT END-->
+                                        <!--PRICE START-->
+                                        <div class="generic_price_tag clearfix">
+                                            <span class="price">
+                                                <span class="currency"><a href="#open-modal">600 &#8380;</a> </span>
+                                                <span class="sign"></span>
 
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th class="price-info text-center box">
-                            <p class="box-title">STARTAP</p>
-                            <p class="box-price"><span class="box-dollar">$</span>600</p>
-                        </th>
-                        <th class="price-info text-center box">
-                            <p class="box-title">BİZNES</p>
-                            <p class="box-price"><span class="box-dollar">$</span>900</p>
-                        </th>
+                                            </span>
+                                        </div>
+                                        <!--//PRICE END-->
+                                    </div>
+                                    <!--//HEAD PRICE DETAIL END-->
+                                    <!--FEATURE LIST START-->
+                                    <div class="generic_feature_list">
+                                        <ul>
+                                            <li>
+                                                <span>16</span>
+                                                <strong>Post</strong>
+                                            </li>
+                                            <li><span>1</span> Video/Infoqrafika</li>
+                                            <li><span>O</span> Photohsoot</li>
+                                            <li><span>O</span> Highlight</li>
+                                            <li><span>x </span> Booster</li>
+                                            <li><span>3 Dildə </span> Kopiraytinq</li>
+                                            <li><span>O</span>Səhifələrin İdarə Olunması</li>
+                                            <li><span>O</span> Brend Loyallığı ilə bağlı Konsultasiya</li>
+                                            <li><span>O</span> Targetinq üzrə Konsultasiya </li>
+                                            <li><span>O</span> AR Filter </li>
+                                            <li><span>50% Endirim</span> AR İnteraktiv </li>
+                                            <li><span>O</span> Google Business İdarə Olunması </li>
+                                        </ul>
+                                    </div>
+                                    <!--//FEATURE LIST END-->
+                                    <!--BUTTON START-->
+                                    <div class="generic_price_btn clearfix">
+                                        <a class="" href="">Sign up</a>
+                                    </div>
+                                    <!--//BUTTON END-->
+                                </div>
+                                <!--//PRICE CONTENT END-->
+                            </div>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td colspan="4">Post</td>
-                    </tr>
-                    <tr class="compare-row">
-                        <td>Post</td>
-                        <td><span class="tickblue">20</span></td>
-                        <td class="tickblue">16</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Video/Infoqrafika</td>
-                    </tr>
-                    <tr>
-                        <td>Video/Infoqrafika</td>
-                        <td><span class="tickblue">1</span></td>
-                        <td class="tickblue">1</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Photohsoot</td>
-                    </tr>
-                    <tr class="compare-row">
-                        <td>Photohsoot</td>
-                        <td><span class="tickblue">✔</span></td>
-                        <td><span class="tickblue">✔</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Highlight</td>
-                    </tr>
-                    <tr>
-                        <td>Highlight</td>
-                        <td><span class="tickblue">✔</span></td>
-                        <td><span class="tickblue">✔</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4"Booster</td>
-                    </tr>
-                    <tr class="compare-row">
-                        <td>Booster</td>
-                        <td><span class="tickblue">İlk ay ödənişsiz</span></td>
-                        <td><span class="tickblue">X</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Kopiraytinq</td>
-                    </tr>
-                    <tr>
-                        <td>Kopiraytinq</td>
-                        <td><span class="tickblue">3 Dildə</span></td>
-                        <td><span class="tickblue">3 Dildə</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Səhifələrin İdarə Olunması</td>
-                    </tr>
-                    <tr class="compare-row">
-                        <td>Səhifələrin İdarə Olunması</td>
-                        <td><span class="tickblue">✔</span></td>
-                        <td><span class="tickblue">✔</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Brend Loyallığı ilə bağlı Konsultasiya</td>
-                    </tr>
-                    <tr>
-                        <td>Brend Loyallığı ilə bağlı Konsultasiya</td>
-                        <td><span class="tickblue">✔</span></td>
-                        <td><span class="tickblue">✔</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Brend Loyallığı ilə bağlı Konsultasiya 	</td>
-                    </tr>
-                    <tr class="compare-row">
-                        <td>Brend Loyallığı ilə bağlı Konsultasiya 	</td>
-                        <td class="tickblue">✔</td>
-                        <td class="tickblue">✔</td>
+                            <div class="col-md-6">
+                                <!--PRICE CONTENT START-->
+                                <div class="generic_content clearfix">
+                                    <!--HEAD PRICE DETAIL START-->
+                                    <div class="generic_head_price clearfix">
+                                        <!--HEAD CONTENT START-->
+                                        <div class="generic_head_content clearfix">
+                                            <!--HEAD START-->
+                                            <div class="head_bg"></div>
+                                            <div class="head">
+                                                <span>BUSINESS</span>
+                                            </div>
+                                            <!--//HEAD END-->
+                                        </div>
+                                        <!--//HEAD CONTENT END-->
+                                        <!--PRICE START-->
+                                        <div class="generic_price_tag clearfix">
+                                            <span class="price">
+                                                <span class="currency"><a href="#open-modal">900 &#8380; </a> </span>
+                                                <span class="sign"></span>
 
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Targetinq üzrə Konsultasiya	</td>
-                    </tr>
-                    <tr>
-                        <td>Targetinq üzrə Konsultasiya	</td>
-                        <td><span class="tickblue">✔</span></td>
-                        <td><span class="tickblue">✔</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">AR Filter</td>
-                    </tr>
-                    <tr class="compare-row">
-                        <td>AR Filter</td>
-                        <td><span class="tickblue">X</span></td>
-                        <td><span class="tickblue">✔</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">AR İnteraktiv</td>
-                    </tr>
-                    <tr>
-                        <td>AR İnteraktiv</td>
-                        <td ><span class="tickblue">X</span></td>
-                        <td><span class="tickblue">50% Endirim</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="4">Google Business İdarə Olunması	</td>
-                    </tr>
-                    <tr class="compare-row">
-                        <td>Google Business İdarə Olunması	</td>
-                        <td>X</td>
-                        <td><span class="tickblue">✔</span></td>
-                    </tr>
-                 
-                </tbody>
-            </table>
+                                            </span>
+                                        </div>
+                                        <!--//PRICE END-->
+                                    </div>
+                                    <!--//HEAD PRICE DETAIL END-->
+                                    <!--FEATURE LIST START-->
+                                    <div class="generic_feature_list">
+                                        <ul>
+                                            <li>
+                                                <span>16</span>
+                                                <strong>Post</strong>
+                                            </li>
+                                            <li><span>1</span> Video/Infoqrafika</li>
+                                            <li><span>O</span> Photohsoot</li>
+                                            <li><span>O</span> Highlight</li>
+                                            <li><span>x </span> Booster</li>
+                                            <li><span>3 Dildə </span> Kopiraytinq</li>
+                                            <li><span>O</span>Səhifələrin İdarə Olunması</li>
+                                            <li><span>O</span> Brend Loyallığı ilə bağlı Konsultasiya</li>
+                                            <li><span>O</span> Targetinq üzrə Konsultasiya </li>
+                                            <li><span>O</span> AR Filter </li>
+                                            <li><span>50% Endirim</span> AR İnteraktiv </li>
+                                            <li><span>O</span> Google Business İdarə Olunması </li>
+                                        </ul>
+                                    </div>
+                                    <!--//FEATURE LIST END-->
+                                    <!--BUTTON START-->
+                                    <div class="generic_price_btn clearfix">
+                                        <a class="" href="">Sign up</a>
+                                    </div>
+                                    <!--//BUTTON END-->
+                                </div>
+                                <!--//PRICE CONTENT END-->
+                            </div>
+                        </div>
+                        <!--//BLOCK ROW END-->
+                    </div>
+                </section>
+
+            </div>
+
+
+
 
         </div>
 
+  <!-- ==================== Start clients Brands ==================== -->
 
-        <!-- ==================== Start clients Brands ==================== -->
+  <section class="clients section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 valign">
+                <div class="sec-head custom-font mb-0">
+                    <h6>Clients</h6>
+                    <h3>Our <br> Clients.</h3>
 
-        <section class="clients section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 valign">
-                        <div class="sec-head custom-font mb-0">
-                            <h6>Clients</h6>
-                            <h3>Our <br> Clients.</h3>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="cilient owl-carousel owl-theme">
-
-                            <div class="item">
-
-                                <div class="row bord mb-5">
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131744.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131416.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131235.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131209.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130229.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130350.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row bord mb-5">
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131112.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131047.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130859.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130728.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125650.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125432.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="item">
-
-                                <div class="row bord mb-5">
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125316.jpg"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125251.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125123.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124937.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124921.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124913.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="row bord mb-5">
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124849.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124829.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124805.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124757.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124906.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124858.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="item">
-                                <div class="row bord mb-5">
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124748.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124719.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124705.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124652.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124636.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124626.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row bord mb-5">
-
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124618.png"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-sm-4  col-6">
-                                        <div class="img border rounded">
-                                            <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130602.jpg"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-8">
+                <div class="cilient owl-carousel owl-theme">
 
-        <!-- ==================== End clients Brands ==================== -->
+                    <div class="item">
+
+                        <div class="row bord mb-5">
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124652.png"
+                                        alt="">
+
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130350.png"
+                                        alt="">
+
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124636.png"
+                                        alt="">
 
 
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124829.png"
+                                        alt="">
+
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="img border rounded">
+
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125650.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                          
+
+                        </div>
+
+                        <div class="row bord mb-5">
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302084120.png"
+                                        alt="">
+                        
+                                </div>
+                            </div>
+
+                           
+                          
+
+                           
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130859.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130728.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130229.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125432.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+
+                        <div class="row bord mb-5">
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125316.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125251.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302125123.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124937.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124921.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                           
+
+                        </div>
+
+
+                        <div class="row bord mb-5">
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124849.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131209.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124805.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124757.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124906.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                          
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="item">
+                        <div class="row bord mb-5">
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124748.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124719.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124705.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131744.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131235.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+
+                        <div class="row bord mb-5">
+
+
+                          
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302130602.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131416.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124626.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131112.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302131047.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+
+                        <div class="row bord mb-5">
+
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124913.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="img border rounded">
+                                    <img src="https://www.customar.tech/uploads/photos/5/photos5_az_20200302124858.png"
+                                        alt="">
+                                </div>
+                            </div>
+                           
+                            
+                         
+
+
+                        </div>
+
+
+                       
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== End clients Brands ==================== -->
+
+
+
+        <div id="open-modal" class="modal-window ">
+            <div>
+                <a href="#!" title="Close" class="modal-close "><i class="fas fa-times"></i></a>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="FullName">Full Name</label>
+                        <input type="text" class="form-control" id="FullName" placeholder="Full Name" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="Email">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="Number">Contact</label>
+                        <input type="number" class="form-control" id="Number" placeholder="Phone Number" />
+                    </div>
+
+                </form>
+            </div>
+        </div>
 
 
         <!-- ==================== Start call-to-action ==================== -->
@@ -702,9 +807,11 @@
 
         <!-- ==================== End Footer ==================== -->
 
+
     </div>
     <!-- jQuery -->
     <script src="js/jquery-3.0.0.min.js"></script>
+
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
 
     <!-- plugins -->
@@ -726,6 +833,13 @@
             navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
 
         })
+    </script>
+
+    <script>
+        $('.closeLink').click(function (e) {
+            e.preventDefault();
+            return false;
+        });
     </script>
 
 </body>
