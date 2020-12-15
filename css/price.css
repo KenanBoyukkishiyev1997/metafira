@@ -173,7 +173,10 @@
 	font-size: 18px;
 	padding: 15px 0;
 	transition: all 0.3s ease-in-out 0s;
+	text-align: left;
+	padding-left: 2rem;
 }
+
 #generic_price_table .generic_content .generic_feature_list ul li:hover{
 	transition: all 0.3s ease-in-out 0s;
 	-moz-transition: all 0.3s ease-in-out 0s;
